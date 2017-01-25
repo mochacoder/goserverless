@@ -103,4 +103,6 @@ The URL will look like this: `https://XXX:YYY@something.scm.azurewebsites.net/de
 `XXX` is your username (you need to include the `$` if any), `YYY` is your password.
 
 ## Credits
+Forked from [William Buchwalter](https://twitter.com/wbuchw)'s [Azul](https://github.com/wbuchwalter/azul.git).
+
 Inspired by [TJ Holowaychuk](https://twitter.com/tjholowaychuk)'s [Apex](https://github.com/apex/apex).
