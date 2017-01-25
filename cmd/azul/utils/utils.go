@@ -5,12 +5,12 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/wbuchwalter/azul/app"
+	"github.com/mochacoder/goserverless/app"
 )
 
-//GetApp returns an App based on azul.json
+//GetApp returns an App based on goserverless.json
 func GetApp(wd string) (*app.App, error) {
-	file, err := os.Open(wd + "/azul.json")
+	file, err := os.Open(wd + "/goserverless.json")
 	if err != nil {
 		return nil, err
 	}

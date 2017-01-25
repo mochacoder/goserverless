@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/wbuchwalter/azul/cmd/azul/root"
-	"github.com/wbuchwalter/azul/cmd/azul/utils"
-	"github.com/wbuchwalter/azul/function"
+	"github.com/mochacoder/goserverless/cmd/gsl/root"
+	"github.com/mochacoder/goserverless/cmd/gsl/utils"
+	"github.com/mochacoder/goserverless/function"
 )
 
 var deployCmd = &cobra.Command{
@@ -43,8 +43,8 @@ func preRun(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	if _, err := os.Stat(wd + "/azul.json"); os.IsNotExist(err) {
-		return errors.New("azul.json file not found")
+	if _, err := os.Stat(wd + "/goserverless.json"); os.IsNotExist(err) {
+		return errors.New("goserverless.json file not found")
 	}
 
 	if len(args) != 1 {

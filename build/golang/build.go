@@ -5,8 +5,8 @@ import (
 	"os/exec"
 
 	"github.com/mitchellh/go-homedir"
-	"github.com/wbuchwalter/azul/function"
-	"github.com/wbuchwalter/azul/utils"
+	"github.com/mochacoder/goserverless/function"
+	"github.com/mochacoder/goserverless/utils"
 )
 
 //Build main.go in a temp folder, read the bytes, delete the file
@@ -18,10 +18,10 @@ func Build(f *function.Function) (function.FilesMap, function.Config, error) {
 	if err != nil {
 		return nil, conf, err
 	}
-	dst := dir + "/.azul/main.exe"
+	dst := dir + "/.goserverless/main.exe"
 
 	//-ldflags should be removed once C# -> Go communication is not done via a file anymore
-	buildCmd := `GOOS=windows GOARCH=386 go build -ldflags="-X github.com/wbuchwalter/azul/azul-go.FunctionName=` + f.Name + `" ` + "-o " + dst + " " + f.Path + "main.go"
+	buildCmd := `GOOS=windows GOARCH=386 go build -ldflags="-X github.com/mochacoder/goserverless/goserverless-go.FunctionName=` + f.Name + `" ` + "-o " + dst + " " + f.Path + "main.go"
 	cmd := exec.Command("sh", "-c", buildCmd)
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout

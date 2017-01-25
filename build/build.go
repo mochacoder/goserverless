@@ -3,9 +3,9 @@ package build
 import (
 	"os"
 
-	"github.com/wbuchwalter/azul/build/basic"
-	"github.com/wbuchwalter/azul/build/golang"
-	"github.com/wbuchwalter/azul/function"
+	"github.com/mochacoder/goserverless/build/basic"
+	"github.com/mochacoder/goserverless/build/golang"
+	"github.com/mochacoder/goserverless/function"
 )
 
 type buildFn func(f *function.Function) (function.FilesMap, function.Config, error)

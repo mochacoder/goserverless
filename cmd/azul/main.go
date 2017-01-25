@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "github.com/wbuchwalter/azul/cmd/azul/delete"
-	_ "github.com/wbuchwalter/azul/cmd/azul/deploy"
-	_ "github.com/wbuchwalter/azul/cmd/azul/logs"
-	"github.com/wbuchwalter/azul/cmd/azul/root"
+	_ "github.com/mochacoder/goserverless/cmd/gsl/delete"
+	_ "github.com/mochacoder/goserverless/cmd/gsl/deploy"
+	_ "github.com/mochacoder/goserverless/cmd/gsl/logs"
+	"github.com/mochacoder/goserverless/cmd/gsl/root"
 )
 
 func main() {

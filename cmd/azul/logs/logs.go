@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/wbuchwalter/azul/cmd/azul/root"
-	"github.com/wbuchwalter/azul/cmd/azul/utils"
-	"github.com/wbuchwalter/azul/function"
+	"github.com/mochacoder/goserverless/cmd/gsl/root"
+	"github.com/mochacoder/goserverless/cmd/gsl/utils"
+	"github.com/mochacoder/goserverless/function"
 )
 
 var follow bool

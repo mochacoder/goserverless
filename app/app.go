@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/wbuchwalter/azul/build"
-	"github.com/wbuchwalter/azul/function"
+	"github.com/mochacoder/goserverless/build"
+	"github.com/mochacoder/goserverless/function"
 )
 
 //App represents an Azure Function App's configuration

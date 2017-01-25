@@ -1,4 +1,4 @@
-package azul
+package goserverless
 
 import (
 	"encoding/json"
@@ -7,7 +7,7 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/wbuchwalter/azul/azul-go/logs"
+	"github.com/mochacoder/goserverless/goserverless-go/logs"
 )
 
 type handlerFn func(req json.RawMessage, logger logs.Logger) (interface{}, error)

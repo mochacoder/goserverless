@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/wbuchwalter/azul/azul-go"
-	"github.com/wbuchwalter/azul/azul-go/logs"
+	"github.com/mochacoder/goserverless/goserverless-go"
+	"github.com/mochacoder/goserverless/goserverless-go/logs"
 )
 
 type input struct {
@@ -16,7 +16,7 @@ type Output struct {
 }
 
 func main() {
-	azul.Handle(func(event json.RawMessage, logger logs.Logger) (interface{}, error) {
+	goserverless.Handle(func(event json.RawMessage, logger logs.Logger) (interface{}, error) {
 		var i input
 		var output Output
 

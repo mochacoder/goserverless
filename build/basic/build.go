@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/wbuchwalter/azul/function"
+	"github.com/mochacoder/goserverless/function"
 )
 
 //Build main.go in a temp folder, read the bytes, delete the file
