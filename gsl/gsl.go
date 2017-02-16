@@ -1,4 +1,4 @@
-package goserverless
+package gsl
 
 import (
 	"encoding/json"
@@ -7,7 +7,7 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/mochacoder/goserverless/goserverless-go/logs"
+	"github.com/mochacoder/goserverless/gsl/logs"
 )
 
 type handlerFn func(req json.RawMessage, logger logs.Logger) (interface{}, error)

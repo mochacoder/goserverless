@@ -21,7 +21,7 @@ func Build(f *function.Function) (function.FilesMap, function.Config, error) {
 	dst := dir + "/.goserverless/main.exe"
 
 	//-ldflags should be removed once C# -> Go communication is not done via a file anymore
-	buildCmd := `GOOS=windows GOARCH=386 go build -ldflags="-X github.com/mochacoder/goserverless/goserverless-go.FunctionName=` + f.Name + `" ` + "-o " + dst + " " + f.Path + "main.go"
+	buildCmd := `GOOS=windows GOARCH=386 go build -ldflags="-X github.com/mochacoder/goserverless/gsl.FunctionName=` + f.Name + `" ` + "-o " + dst + " " + f.Path + "main.go"
 	cmd := exec.Command("sh", "-c", buildCmd)
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout

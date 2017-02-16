@@ -4,10 +4,10 @@ import (
 	"errors"
 	"os"
 
-	"github.com/spf13/cobra"
 	"github.com/mochacoder/goserverless/cmd/gsl/root"
 	"github.com/mochacoder/goserverless/cmd/gsl/utils"
 	"github.com/mochacoder/goserverless/function"
+	"github.com/spf13/cobra"
 )
 
 var follow bool
@@ -22,10 +22,8 @@ var logsCmd = &cobra.Command{
 func init() {
 	root.RootCmd.AddCommand(logsCmd)
 
-	// -f flag not implemented yet
-
-	//f := logsCmd.Flags()
-	//f.BoolVarP(&follow, "follow", "f", false, "Specify if the logs should be streamed. When using -f, you don't need to specify a function.")
+	f := logsCmd.Flags()
+	f.BoolVarP(&follow, "follow", "f", false, "Specify if the logs should be streamed. When using -f, you don't need to specify a function.")
 }
 
 func run(cmd *cobra.Command, args []string) error {

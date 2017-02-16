@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/mochacoder/goserverless/goserverless-go"
-	"github.com/mochacoder/goserverless/goserverless-go/logs"
+	"github.com/mochacoder/goserverless/gsl"
+	"github.com/mochacoder/goserverless/gsl/logs"
 )
 
 type input struct {
